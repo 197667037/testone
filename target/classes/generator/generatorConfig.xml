@@ -1,0 +1,79 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<properties resource="config.properties"/>-->
+
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!--<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">-->
+ <!--          <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+               <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+               <property name="caseSensitive" value="true"/>
+           </plugin>-->
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--  <jdbcConnection driverClass="${jdbc.driverClass}"
+                          connectionURL="${jdbc.url}"
+                          userId="${jdbc.user}"
+                          password="${jdbc.password}">
+          </jdbcConnection>-->
+<!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.255.134.170:3306/base"
+                        userId="feiliks"
+                        password="nug0Hob$">
+        </jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.255.134.222:3306/fl_dg_180801"
+                        userId="feiliks"
+                        password="Ki?Grub3">
+        </jdbcConnection>
+        <!-- <javaModelGenerator targetPackage="test.model"
+                             targetProject="\MyProject\src">
+             <property name="enableSubPackages" value="true" />
+             <property name="trimStrings" value="true" />
+         </javaModelGenerator>-->
+        <javaModelGenerator targetPackage="com.test.mapper.model"
+                            targetProject="D:/workspace/test_two/src/main/java"/>
+
+        <sqlMapGenerator targetPackage="com.test.mapper.mapper"
+                         targetProject="D:/workspace/test_two/src/main/java"/>
+
+        <javaClientGenerator targetPackage="com.test.mapper.mapper"
+                             targetProject="D:/workspace/test_two/src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="storage" enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="wms"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="ems"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="t_account"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="t_account_role"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="partner_branch"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="partner_file"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="partner_service"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="partner_ship"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="account_wechat"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="account_wechat_app"> </table>
+        <table enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"  tableName="wechat_app"> </table>
+
+        <!--<table tableName="vshatian_entlist"> </table>-->
+        <!--<table tableName="vshatian_entlistdiff"> </table>-->
+            <!--<generatedKey column="AREA_CODE" sqlStatement="MySql" identity="true"/>-->
+
+
+
+        <!--   <table tableName="ems_app_list">
+               &lt;!&ndash;<generatedKey column="ems_uuid" sqlStatement="JDBC"/>&ndash;&gt;
+           </table>-->
+        <!--<table tableName="vdyck_invtheadtype">-->
+        <!--<generatedKey column="ems_uuid" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="vdyck_invtlisttype">-->
+        <!--<generatedKey column="ems_uuid" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+
+    </context>
+</generatorConfiguration>
